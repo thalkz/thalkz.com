@@ -1,0 +1,38 @@
+# What are Apple Certificates ?
+
+While devbeloping apps for iOS, I've come across Apple's way of making your apps secure, using certificates. Though I've never quite fully understood how it works. I've always been confused by .12 files, .cer files, but also provisioning files, certification requests, etc. I've had countless errors during compilation or deploy that would have been completely avoided, had I taken the time to understand all of this.
+
+So today is the day I take the time to understand.
+
+Here we go.
+
+The system as a whole is called PKI, short for Public Key Infrastructure. Which is a set of "management technologies, people and practices" aimed at dealing with digital certification and verification.
+
+(On a side note, I'm also planning on understanding exactly what SSL certifications are as well, and I'm pretty sure it's the same principles)
+
+So what exactly is the point of certification ? Why is it useful ? Well. Let's say I am a mobile developer and I want to publish an app on the AppStore. Apple needs to be able know that I am the actual developer of the app, and not any random person willing to override my app. They could tie the app to the Apple Developer account I've created. But how would they handle organisations with several people being able to release an app update ? What about app thansfers to another account ? It would be quite difficult for the to handle this securely.
+
+So instead, they use a public-private key pair.
+ - There is a 'public key' which can be shared with anyone and that key has the ability to verify messages that were signed by the digital certificate. 
+ - The 'private key' is only stored on your machine and should not be shared with anyone. It is used to sign a message, that can be verified with the public key.
+
+ One thing that confused me, what that this 'public-private' key pair is also use for encrypting data. But in our case, the whole app (the .ipa file) does not need to be fully encrypted with the private key. The 'message' signed by a certificate is still in clear and readable by anyone.
+
+ When construction a certificate, you are asking Keychain Access to create a key public-private key pair. Keychain Access is a SSL Toolchain. Another very famous SSL Toolchain is OpenSSL. Let's dive into that.
+
+ ## What is OpenSSL ?
+
+ On openssl.org, the first page goes as follows :
+
+ > OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols.
+
+ OpenSSL is an open-source project (yes, it was quite obvious from the name), hosted on Github here https://github.com/openssl/openssl. I t is free to use for any commercial and non-commercial purpouse, as stated on their website. By looking at the Github project, I can see that the project is mostly written in C (70%) with Perl and other langages.
+
+ SSL and TLS are actually the same thing, TLS is just the new and more secure version of SSL, but everyone still calls it SSL. Now how it actually works will be research for another time. For now, all we need to now is that SSL/TSL is a security protocal that uses a public-private key pair delivered by a Certification Authority (CA) to uniquely identify something/someone.
+
+ When creating an Apple Development or Distribution Certificate, you are asking Keychain Access, to deliver you a public-private key pair. The private key goes into a file called CertificateSigningRequest.certSigningRequest. In this file, there are also some additional information about you (name, email adress). You than need to send this .certSigningRequest file to Apple, because they need the public key in order to identify you (and the app updates you send).  This file *does not* contain your private key. In fact, Apple has no access to your private key whatsoever, since it only need to perform verifiation, not signing on your behalf.
+
+ At this point your private key resides in your Keychain Access, and will remain there until:
+ 1. It expires
+ 2. You revoke it
+ 3. You delete the key pair from Kaychain Access
