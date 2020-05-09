@@ -1,6 +1,6 @@
 # What are Apple Certificates ?
 
-While devbeloping apps for iOS, I've come across Apple's way of making your apps secure, using certificates. Though I've never quite fully understood how it works. I've always been confused by .12 files, .cer files, but also provisioning files, certification requests, etc. I've had countless errors during compilation or deploy that would have been completely avoided, had I taken the time to understand all of this.
+While developing apps for iOS, I've come across Apple's way of making your apps secure, using certificates. Though I've never quite fully understood how it works. I've always been confused by .12 files, .cer files, but also provisioning files, certification requests, etc. I've had countless errors during compilation or deploy that would have been completely avoided, had I taken the time to understand all of this.
 
 So today is the day I take the time to understand.
 
@@ -36,3 +36,13 @@ So instead, they use a public-private key pair.
  1. It expires
  2. You revoke it
  3. You delete the key pair from Kaychain Access
+
+```
+func main() {
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	http.HandleFunc("/blog/", servePage)
+	if err := http.ListenAndServe(":80", nil); err != nil {
+		panic(err)
+	}
+}
+```
