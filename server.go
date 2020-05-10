@@ -7,11 +7,13 @@ import (
 	"io/ioutil"
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/html"
+	"log"
 )
 
 func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	 http.HandleFunc("/blog/", servePage)
+	http.HandleFunc("/blog/", servePage)
+  	log.Println("Server is running on port 80")
 	if err := http.ListenAndServe(":80", nil); err != nil {
     	panic(err)
   	}
@@ -20,6 +22,7 @@ func main() {
 func servePage(writer http.ResponseWriter, request *http.Request) {
 	page := request.URL.Path
 	page = strings.TrimPrefix(page, "/blog/")
+	log.Println("Request from", request.RemoteAddr, "for", page)
 	html, err := loadPage(page)
 	if (err != nil) {
 		io.WriteString(writer, "404 Page not foud")
