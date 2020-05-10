@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Courier New", courier, monospace;
 }
 
 body {
@@ -7,7 +7,7 @@ body {
   max-width: 50em;
   line-height: 1.5;
   padding: 4em 1em;
-  color: #555;
+  color: #44;
 }
 
 a {
