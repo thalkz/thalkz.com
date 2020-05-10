@@ -1,4 +1,7 @@
+[Back Home](/index)
 # App Signing and Apple Certificates
+Created: 9 May 2020
+
 While developing Flutter apps, one of the necessary steps is to get your iOS apps on the AppStore. And boy it is complicated. One of the most confusing things are thoses files you need to generate in order to publish your app. There are .12 files, .cer files, but also .provisioning files, Certification Requests, and so on. I’ve never quite took the time to fully understand the logic behind it, and usually scanned online tutorial in order to solve the problem I was facing.
 
 But today, I will the time to the resarch necessary. Today is the day I understand.
@@ -12,7 +15,7 @@ Okay, first things first. App signing solves two very important problems :
 
 To put it simply, Problem 1) is solved using certificates, while Problem 2) is solved with provisioning files. But for now, let’s focus on the signing process, provisioning files will be research for another time.
 
-##The complete app signing process
+## The complete app signing process
 Here is the situation. Your app is ready and compiled, and you want to publish it. But first you need to sign it. Here are the steps you need to follow :
 
 **Step 1)** You generate a Certificate Request from your Keychain Access app on your Mac (yes, you need a Mac for that). This creates a .certSigningRequest file.

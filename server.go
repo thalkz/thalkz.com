@@ -11,8 +11,8 @@ import (
 )
 
 func main() {
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	http.HandleFunc("/blog/", servePage)
+	http.HandleFunc("/", servePage)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("/srv/static"))))
   	log.Println("Server is running on port 80")
 	if err := http.ListenAndServe(":80", nil); err != nil {
     	panic(err)
@@ -20,23 +20,26 @@ func main() {
 }
 
 func servePage(writer http.ResponseWriter, request *http.Request) {
-	page := request.URL.Path
-	page = strings.TrimPrefix(page, "/blog/")
-	log.Println("Request from", request.RemoteAddr, "for", page)
+	page := strings.TrimPrefix(request.URL.Path, "/")
+	if (page == "") {
+		page = "index"
+	} 
 	html, err := loadPage(page)
 	if (err != nil) {
-		io.WriteString(writer, "404 Page not foud")
+		io.WriteString(writer, "400 server error")
+		log.Println(err)
 	}
+	log.Println("Request from", request.RemoteAddr, "for", page)
 	io.WriteString(writer, string(html))
 }
 
 func loadPage(title string) ([]byte, error) {
-    filename := "blog/" + title + ".txt"
+    filename := "/srv/public/" + title + ".md"
     md, err := ioutil.ReadFile(filename)
     if err != nil {
         return nil, err
     }
-    flags := html.CommonFlags | html.CompletePage | html.HrefTargetBlank
+    flags := html.CommonFlags | html.CompletePage
 	opts := html.RendererOptions{
 		Flags: flags,
 		CSS: "../static/style.css",
