@@ -42,7 +42,9 @@ func loadPage(title string) ([]byte, error) {
     flags := html.CommonFlags | html.CompletePage
 	opts := html.RendererOptions{
 		Flags: flags,
+		Title: "Thalkz's blog",
 		CSS: "../static/style.css",
+		Icon: "../static/favicon.ico",
 	}
 	renderer := html.NewRenderer(opts)
     result := markdown.ToHTML(md, nil, renderer)
