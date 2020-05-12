@@ -39,12 +39,9 @@ func servePage(writer http.ResponseWriter, request *http.Request) {
 }
 
 func loadMarkdown(filename string) (string, error) {
-	md, err := ioutil.ReadFile(filename + ".md")
+	file, err := ioutil.ReadFile(filename + ".md")
 	if err != nil {
-        md, err = ioutil.ReadFile("page/error.md")
-    }
-    if err != nil {
-        return "400 server error", err
+        file, _ = ioutil.ReadFile("page/error.md")
     }
     flags := html.CommonFlags | html.CompletePage
 	opts := html.RendererOptions{
@@ -54,6 +51,6 @@ func loadMarkdown(filename string) (string, error) {
 		Icon: "/static/favicon.ico",
 	}
 	renderer := html.NewRenderer(opts)
-    result := string(markdown.ToHTML(md, nil, renderer))
-    return result, nil
+    result := string(markdown.ToHTML(file, nil, renderer))
+    return result, err
 }
