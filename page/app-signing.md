@@ -1,4 +1,4 @@
-[Back Home](/index)
+[Back Home](/page/home)
 # App Signing and Apple Certificates
 Created: 9 May 2020
 

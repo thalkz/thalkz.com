@@ -1,7 +1,7 @@
 # Thalkz's Blog
 
 ## Posts
-9 May 2020 [App Signing and Apple Certificates](./app-signing)
+9 May 2020 [App Signing and Apple Certificates](/page/app-signing)
 
 ## About
 Welcome to my blog ! My name is Roland and I'm passionate about both design and code. I am mainly working with on tech like [Flutter](https://flutter.dev/), [Firebase](https://firebase.google.com/), [Node.js](https://nodejs.org/en/) and [Typescript](https://www.typescriptlang.org/) and I've been starting to learn [Go](https://golang.org/), [Rust](https://www.rust-lang.org/) and others. I will post here about stuff I'm learning about, which means (disclaimer) that I am not an expert in most of the things I'll talk about ;)
