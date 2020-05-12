@@ -1,18 +1,18 @@
 package main
 
 import (
-	"net/http"
+	"log"
 	"io"
-	"strings"
 	"io/ioutil"
+	"strings"
+	"net/http"
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/html"
-	"log"
 )
 
 func main() {
 	http.HandleFunc("/", servePage)
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("/srv/static"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
   	log.Println("Server is running on port 80")
 	if err := http.ListenAndServe(":80", nil); err != nil {
     	panic(err)
@@ -34,7 +34,7 @@ func servePage(writer http.ResponseWriter, request *http.Request) {
 }
 
 func loadPage(title string) ([]byte, error) {
-    filename := "/srv/public/" + title + ".md"
+    filename := "public/" + title + ".md"
     md, err := ioutil.ReadFile(filename)
     if err != nil {
         return nil, err
