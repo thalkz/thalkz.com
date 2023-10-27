@@ -1,11 +1,35 @@
-# Thalkz's Blog
+# Thalkz's Portfolio
 
-## Posts
-9 May 2020 [App Signing and Apple Certificates](/page/app-signing)
+Hi, my name is Roland and I'm passionate about code, product design and entrepreneurship. I've worked since 2018 on building [Neopolis](https://neopolis.io), a mobile game that uses real-world data as game assets, as well as  the compagny around it with my two co-founders: Lucas and Ben. More info can be found on [Revolt Games's website](https://revoltgames.io).
+
+I always have one or two side-projects in the making, and (thankfully) some actually make it to "working" stage. I mainly write stuff in Flutter, Go and Typescript. I plan to share some of them on this website.
+
+## Side-Projects
+- [WIP] 2023 [Year of Knowledge](/page/yearofknowledge) ([see notes [fr]](#)) - a year of learning one thing per day on different subjects, including learnings when traveling in Europe
+
+- 2022 [Trikount](/page/trikount) ([github](https://github.com/thalkz/trikount), [website [fr]](https://trikount.com)) - a webapp to track expenses in groups, for travels, projects, etc.
+
+- 2022 [MK Ranking](/page/mkranking) ([github](https://github.com/thalkz/mkranking)) - an elo-based leaderboard for Mario Kart competition previously hosted on mkranking.com
+
+- 2022 [Speed Typer](/page/speedtyper) ([github](https://github.com/thalkz/speed_typer)) - a typing game in Flutter, made during a train ride from Lyon to Lille
+
+- 2021 [Advent of Code](/page/adventofcode) ([github](https://github.com/thalkz/advent_of_code)) - my solutions to [AoC](https://adventofcode.com) since 2021, to learn a new language each year
+
+- 2020 [Noxio](/page/noxio) ([github](https://github.com/thalkz/noxio)) - a two-player board game in Flutter & Firebase, inspired by Chapatiz' Bacteria
+
+## At Revolt Games
+- 2022 [Terra Pipeline](/page/terra) - a program that combines various sources of terrain data into a comprehensive database of world-wide hexagonal tiles
+
+- 2022 [Terra API](/page/terra) - a public API to serve the Terra data, used in Neopolis & Neoland
+
+- 2021 [Neocli](/page/neocli) - a Javascript CLI to handle common game-related operations in Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
+
+- 2019-22 [Neopolis Server](/page/neopolis) - the Node.js backend for Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
+
+- 2018-22 [Neopolis](/page/neopolis) - the Flutter app for Neopolis (co-authored with [jgrandchavin](https://github.com/jgrandchavin) and [deladourig](https://github.com/deladourig))
 
 ## About
-Welcome to my blog ! My name is Roland and I'm passionate about both design and code. I am mainly working with on tech like [Flutter](https://flutter.dev/), [Firebase](https://firebase.google.com/), [Node.js](https://nodejs.org/en/) and [Typescript](https://www.typescriptlang.org/) and I've been starting to learn [Go](https://golang.org/), [Rust](https://www.rust-lang.org/) and others. I will post here about stuff I'm learning about, which means (disclaimer) that I am not an expert in most of the things I'll talk about ;)
 
-Ealy goals of this blog are to make get this blog up & running. The source code will be posted here [on Github](https://github.com/thalkz/blog). I'm building the webserver myself, in Go and by using as few dependencies as possible and by making it as minimalist as possible. The idea came from reading [Ryan Jacobs' blog](https://blog.notryan.com/), as well as the [Designed to Last](https://jeffhuang.com/designed_to_last/) post. I will also try to follow the principles of [The 12 factor app](https://12factor.net/), which I know this blog is still very far from.
+The source-code of this website can be found on [github](https://github.com/thalkz), and is representative of my design and programming philosophy: keep things simple. For side-projects, I try to build things myself, which means avoid high-level frameworks or libraries as much as possible. 
 
-I'm also planning on posting about some of my app projects, some of which are available for download like Noxio on [iOS](https://apps.apple.com/us/app/noxio/id1447716702) and [Android](https://play.google.com/store/apps/details?id=com.revolt.noxio&hl=fr), HistoryTime also on [Android](https://play.google.com/store/apps/details?id=eu.trebuchet.historytime&hl=en_US) and [iOS](https://apps.apple.com/fr/app/history-time/id1395820582).
+Some of my inspirations for this website are [Ryan Jacobs' blog](https://blog.notryan.com/), the [Designed to Last](https://jeffhuang.com/designed_to_last/) post, and the excellent [Advent of Code](https://adventofcode.com).
