@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - 4000:80
+    volumes:
+      - ./page:/home/page
