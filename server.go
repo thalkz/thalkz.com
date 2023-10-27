@@ -1,35 +1,43 @@
 package main
 
 import (
-	"log"
 	"io"
-	"io/ioutil"
-	"strings"
+	"log"
 	"net/http"
+	"os"
+	"strings"
+
 	"github.com/gomarkdown/markdown"
 	"github.com/gomarkdown/markdown/html"
 )
 
-func main() {
-	http.HandleFunc("/", servePage)
-	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
-	  
-	log.Println("Server is running on port 80")
-	
-	  if err := http.ListenAndServe(":80", nil); err != nil {
-    	panic(err)
-  	}
+var flags = html.CommonFlags | html.CompletePage
+var opts = html.RendererOptions{
+	Flags: flags,
+	Title: "Thalkz's portfolio",
+	CSS:   "/static/style.css",
+	Icon:  "/static/favicon.ico",
+}
+var renderer = html.NewRenderer(opts)
+
+func loadMarkdown(filename string) (string, error) {
+	file, err := os.ReadFile(filename + ".md")
+	if err != nil {
+		file, _ = os.ReadFile("page/error.md")
+	}
+
+	result := string(markdown.ToHTML(file, nil, renderer))
+	return result, err
 }
 
 func servePage(writer http.ResponseWriter, request *http.Request) {
 	filename := strings.TrimPrefix(request.URL.Path, "/")
-	if (filename == "") {
+	if filename == "" {
 		filename = "page/home"
 	}
 
 	result, err := loadMarkdown(filename)
-	if (err != nil) {
+	if err != nil {
 		log.Println(request.RemoteAddr, "Error:", err)
 	} else {
 		log.Println(request.RemoteAddr, filename)
@@ -38,19 +46,14 @@ func servePage(writer http.ResponseWriter, request *http.Request) {
 	io.WriteString(writer, result)
 }
 
-func loadMarkdown(filename string) (string, error) {
-	file, err := ioutil.ReadFile(filename + ".md")
-	if err != nil {
-        file, _ = ioutil.ReadFile("page/error.md")
-    }
-    flags := html.CommonFlags | html.CompletePage
-	opts := html.RendererOptions{
-		Flags: flags,
-		Title: "Thalkz's blog",
-		CSS: "/static/style.css",
-		Icon: "/static/favicon.ico",
+func main() {
+	http.HandleFunc("/", servePage)
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
+	log.Println("Server is running on port 80")
+
+	if err := http.ListenAndServe(":80", nil); err != nil {
+		panic(err)
 	}
-	renderer := html.NewRenderer(opts)
-    result := string(markdown.ToHTML(file, nil, renderer))
-    return result, err
 }
