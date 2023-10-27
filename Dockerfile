@@ -8,7 +8,7 @@ COPY . .
 RUN go build -o /main
 
 FROM alpine as runner
-RUN mkdir /home/page
+RUN mkdir /home/pages
 WORKDIR /home
 COPY ./static ./static
 COPY --from=builder /main ./main

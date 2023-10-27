@@ -23,7 +23,7 @@ var renderer = html.NewRenderer(opts)
 func loadMarkdown(filename string) (string, error) {
 	file, err := os.ReadFile(filename + ".md")
 	if err != nil {
-		file, _ = os.ReadFile("page/error.md")
+		file, _ = os.ReadFile("pages/error.md")
 	}
 
 	result := string(markdown.ToHTML(file, nil, renderer))
@@ -33,7 +33,7 @@ func loadMarkdown(filename string) (string, error) {
 func servePage(writer http.ResponseWriter, request *http.Request) {
 	filename := strings.TrimPrefix(request.URL.Path, "/")
 	if filename == "" {
-		filename = "page/home"
+		filename = "pages/home"
 	}
 
 	result, err := loadMarkdown(filename)
