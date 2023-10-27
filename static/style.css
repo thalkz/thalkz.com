@@ -1,4 +1,5 @@
 body {
+  background-color: #111;
   font-family: "Courier New", courier, monospace;
 }
 
@@ -7,11 +8,11 @@ body {
   max-width: 50em;
   line-height: 1.5;
   padding: 4em 1em;
-  color: #44;
+  color: #EEEEEE;
 }
 
 a {
-	color: #276CF6;
+	color: #21f621;
 	text-decoration: none;
 }
 
@@ -27,7 +28,7 @@ h2 {
 h1,
 h2,
 strong {
-  color: #333;
+  color: #FFF;
 }
 
 pre {
