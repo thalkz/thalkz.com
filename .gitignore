@@ -1,3 +1,5 @@
 ./server
 .DS_Store
 blog
+tmp
+.vscode
