@@ -36,4 +36,4 @@ jobs:
           key: ${{ secrets.HELLION_SSH_KEY }}
           script: |
             cd ./thalkz.com
-            ./update.sh $GIT_TAG_NAME
+            ./update.sh ${{ env.GIT_TAG_NAME }}
