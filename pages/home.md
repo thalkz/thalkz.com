@@ -15,7 +15,7 @@ I always have one or two side-projects in the making, and (thankfully) some actu
 
 - 2021 [Advent of Code](/pages/adventofcode) ([github](https://github.com/thalkz/advent_of_code)) - my solutions to [AoC](https://adventofcode.com) since 2021, to learn a new language each year
 
-- 2020 [Noxio](/pages/noxio) ([github](https://github.com/thalkz/noxio)) - a two-player board game in Flutter & Firebase, inspired by Chapatiz' Bacteria
+- 2020 [Noxio](/pages/noxio) ([github](https://github.com/thalkz/noxio)) - a two-player board game for mobile phones, inspired by Chapatiz' Bacteria
 
 ## At Revolt Games
 - 2022 [Terra Pipeline](/pages/terra) - a program that combines various sources of terrain data into a comprehensive database of world-wide hexagonal tiles
