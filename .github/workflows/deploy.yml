@@ -14,10 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache docker layers
-        uses: satackey/action-docker-layer-caching@v0.0.11
-        continue-on-error: true
-
       - name: Build image
         run: docker build . --tag thalkz.com --label "runnumber=${GITHUB_RUN_ID}"
 
