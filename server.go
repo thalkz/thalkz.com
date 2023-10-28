@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -47,7 +48,15 @@ func servePage(writer http.ResponseWriter, request *http.Request) {
 	io.WriteString(writer, result)
 }
 
+func serveVersion(writer http.ResponseWriter, request *http.Request) {
+	version := os.Getenv("VERSION")
+	text := fmt.Sprintf("version: %v", version)
+	page := string(markdown.ToHTML([]byte(text), nil, renderer))
+	io.WriteString(writer, page)
+}
+
 func main() {
+	http.HandleFunc("/version", serveVersion)
 	http.HandleFunc("/", servePage)
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
