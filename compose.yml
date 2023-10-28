@@ -8,5 +8,6 @@ services:
       - 4000:80
     volumes:
       - ./pages:/home/pages
+      - ./images:/home/images
     environment: 
       - VERSION=$TAG

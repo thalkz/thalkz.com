@@ -46,3 +46,7 @@ code {
   vertical-align: text-bottom;
   font-family: monospace;
 }
+
+img {
+  max-width: 100%;
+}

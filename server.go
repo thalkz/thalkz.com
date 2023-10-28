@@ -58,8 +58,10 @@ func serveVersion(writer http.ResponseWriter, request *http.Request) {
 func main() {
 	http.HandleFunc("/version", serveVersion)
 	http.HandleFunc("/", servePage)
-	fs := http.FileServer(http.Dir("static"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	staticFs := http.FileServer(http.Dir("static"))
+	http.Handle("/static/", http.StripPrefix("/static/", staticFs))
+	imagesFs := http.FileServer(http.Dir("images"))
+	http.Handle("/images/", http.StripPrefix("/images/", imagesFs))
 
 	log.Println("Server is running on port 80")
 
