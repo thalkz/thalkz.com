@@ -20,12 +20,11 @@ jobs:
       - name: Log into ghcr.io
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
 
-      - uses: olegtarasov/get-tag@v2.1
-        id: tagName
+      - uses: olegtarasov/get-tag@v2.1.2
 
       - name: Push image
         run: |
-          docker tag thalkz.com ghcr.io/thalkz/thalkz.com:${{ steps.tagName.outputs.tag }}
+          docker tag thalkz.com ghcr.io/thalkz/thalkz.com:$GIT_TAG_NAME
           docker tag thalkz.com ghcr.io/thalkz/thalkz.com:latest
           docker push --all-tags ghcr.io/thalkz/thalkz.com
   
@@ -37,4 +36,4 @@ jobs:
           key: ${{ secrets.HELLION_SSH_KEY }}
           script: |
             cd ./thalkz.com
-            ./update.sh ${{ steps.tagName.outputs.tag }}
+            ./update.sh $GIT_TAG_NAME
