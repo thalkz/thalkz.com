@@ -5,28 +5,28 @@ Hi, my name is Roland and I'm passionate about code, product design and entrepre
 I always have one or two side-projects in the making, and (thankfully) some actually make it to "working" stage. I mainly write stuff in Flutter, Go and Typescript. I plan to share some of them on this website.
 
 ## Side-Projects
-- [WIP] 2023 [Year of Knowledge](/pages/yearofknowledge) ([see notes [fr]](#)) - a year of learning one thing per day on different subjects, including learnings when traveling in Europe
+- 2023 [🚧 Year of Knowledge](/pages/yearofknowledge) ([see notes [fr]](#)) - a year of learning one thing per day on different subjects, including learnings when traveling in Europe
 
-- 2022 [Trikount](/pages/trikount) ([github](https://github.com/thalkz/trikount), [website [fr]](https://trikount.com)) - a webapp to track expenses in groups, for travels, projects, etc.
+- 2022 [🚧 Trikount](/pages/trikount) ([github](https://github.com/thalkz/trikount), [website [fr]](https://trikount.com)) - a webapp to track expenses in groups, for travels, projects, etc.
 
-- 2022 [MK Ranking](/pages/mkranking) ([github](https://github.com/thalkz/mkranking)) - an elo-based leaderboard for Mario Kart competition previously hosted on mkranking.com
+- 2022 [🚧 MK Ranking](/pages/mkranking) ([github](https://github.com/thalkz/mkranking)) - an elo-based leaderboard for Mario Kart competition previously hosted on mkranking.com
 
-- 2022 [Speed Typer](/pages/speedtyper) ([github](https://github.com/thalkz/speed_typer)) - a typing game in Flutter, made during a train ride from Lyon to Lille
+- 2022 [🚧 Speed Typer](/pages/speedtyper) ([github](https://github.com/thalkz/speed_typer)) - a typing game in Flutter, made during a train ride from Lyon to Lille
 
-- 2021 [Advent of Code](/pages/adventofcode) ([github](https://github.com/thalkz/advent_of_code)) - my solutions to [AoC](https://adventofcode.com) since 2021, to learn a new language each year
+- 2021 [🚧 Advent of Code](/pages/adventofcode) ([github](https://github.com/thalkz/advent_of_code)) - my solutions to [AoC](https://adventofcode.com) since 2021, to learn a new language each year
 
-- 2020 [Noxio](/pages/noxio) ([github](https://github.com/thalkz/noxio)) - a two-player board game for mobile phones, inspired by Chapatiz' Bacteria
+- 2020 [Noxio](/pages/noxio) ([github](https://github.com/thalkz/noxio)) - a two-player board game for mobile phones, remake of Bacteria
 
 ## At Revolt Games
-- 2022 [Terra Pipeline](/pages/terra) - a program that combines various sources of terrain data into a comprehensive database of world-wide hexagonal tiles
+- 2022 [🚧 Terra Pipeline](/pages/terra) - a program that combines various sources of terrain data into a comprehensive database of world-wide hexagonal tiles
 
-- 2022 [Terra API](/pages/terra) - a public API to serve the Terra data, used in Neopolis & Neoland
+- 2022 [🚧 Terra API](/pages/terra) - a public API to serve the Terra data, used in Neopolis & Neoland
 
-- 2021 [Neocli](/pages/neocli) - a Javascript CLI to handle common game-related operations in Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
+- 2021 [🚧 Neocli](/pages/neocli) - a Javascript CLI to handle common game-related operations in Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
 
-- 2019-22 [Neopolis Server](/pages/neopolis) - the Node.js backend for Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
+- 2019-22 [🚧 Neopolis Server](/pages/neopolis) - the Node.js backend for Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
 
-- 2018-22 [Neopolis](/pages/neopolis) - the Flutter app for Neopolis (co-authored with [jgrandchavin](https://github.com/jgrandchavin) and [deladourig](https://github.com/deladourig))
+- 2018-22 [🚧 Neopolis](/pages/neopolis) - the Flutter app for Neopolis (co-authored with [jgrandchavin](https://github.com/jgrandchavin) and [deladourig](https://github.com/deladourig))
 
 ## About
 
