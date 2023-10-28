@@ -17,6 +17,7 @@ var opts = html.RendererOptions{
 	Title: "Thalkz's portfolio",
 	CSS:   "/static/style.css",
 	Icon:  "/static/favicon.ico",
+	Head:  []byte("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"),
 }
 var renderer = html.NewRenderer(opts)
 
