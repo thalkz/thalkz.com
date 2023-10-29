@@ -8,7 +8,7 @@ I always have one or two side-projects in the making, and (thankfully) some actu
 
 * 2022 [⭐️ Trikount](/pages/trikount) ([github](https://github.com/thalkz/trikount), [website [fr]](https://trikount.com)) - a webapp to track expenses in groups, for travels, projects, etc.
 
-* 2023 [🚧 Year of Knowledge](/pages/yearofknowledge) ([notes [fr]](#)) - a year of learning one thing per day on different subjects, including learnings when traveling in Europe
+* 2023 [Year of Knowledge](/pages/yearofknowledge) ([notes [fr]](#)) - a year of learning one thing per day on different subjects, including learnings when traveling in Europe
 
 * 2022 [MK Ranking](/pages/mkranking) ([github](https://github.com/thalkz/mkranking), [demo [fr]](https://mkranking.thalkz.com)) - an elo-based leaderboard for Mario Kart competition previously hosted on mkranking.com
 
@@ -18,7 +18,7 @@ I always have one or two side-projects in the making, and (thankfully) some actu
 
 * 2020 [Noxio](/pages/noxio) ([github](https://github.com/thalkz/noxio)) - a two-player board game for mobile phones, remake of Bacteria
 
-* 2020 [🚧 Ma Petite Planète](/pages/mpp) ([official website [fr]](https://mapetiteplanete.org)) - The MVP of an app with ecological challenges, played in teams
+* 2020 [Ma Petite Planète](/pages/mpp) ([official website [fr]](https://mapetiteplanete.org)) - the MVP of an app with ecological challenges, played in teams
 
 ## At Revolt Games
 
