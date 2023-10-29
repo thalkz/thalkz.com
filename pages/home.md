@@ -11,7 +11,7 @@ I always have one or two side-projects in the making, and (thankfully) some actu
 
 - 2022 [🚧 MK Ranking](/pages/mkranking) ([github](https://github.com/thalkz/mkranking)) - an elo-based leaderboard for Mario Kart competition previously hosted on mkranking.com
 
-- 2022 [🚧 Speed Typer](/pages/speedtyper) ([github](https://github.com/thalkz/speed_typer)) - a typing game in Flutter, made during a train ride from Lyon to Lille
+- 2022 [Speed Typer](/pages/speedtyper) ([github](https://github.com/thalkz/speed_typer)) - a typing game in Flutter, made during a train ride from Lyon to Lille
 
 - 2021 [Advent of Code](/pages/adventofcode) ([github](https://github.com/thalkz/advent_of_code)) - my solutions to [AoC](https://adventofcode.com) since 2021, to learn a new language each year
 
