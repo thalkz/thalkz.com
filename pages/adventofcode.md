@@ -2,7 +2,8 @@
 
 # Advent of Code
 - Each year since 2021
-- Source: [Github](https://github.com/thalkz/advent_of_code)
+- Tech: Go, Python
+- Source: [github](https://github.com/thalkz/advent_of_code)
 
 My solutions to [AoC](https://adventofcode.com) since 2021, used to learn a new language each year.
 
