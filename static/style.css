@@ -45,6 +45,9 @@ code {
   padding: 2px 4px;
   vertical-align: text-bottom;
   font-family: monospace;
+  color: #69c;
+  background-color: #222222;
+  border-radius: 5px;
 }
 
 img {
