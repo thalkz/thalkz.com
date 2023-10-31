@@ -6,13 +6,13 @@ I always have one or two side-projects in the making, and (thankfully) some actu
 
 ## Side-Projects
 
-My latest side-projects, with explanatory posts about the motivations for each project, the design process and key learnings. The code can be found on [my github](https://github.com/thalkz).
+My latest side-projects, with explanatory posts about the motivations behind each project, the design process and key learnings.
 
 * [Year of Knowledge](/pages/yearofknowledge) (2023), a year of learning one thing per day on different subjects, including learnings when traveling in Europe.
 
 * [⭐️ Trikount](/pages/trikount) (2022-23), a webapp to track expenses in groups and easily split the bill.
 
-* [MK Ranking](/pages/mkranking) (2022), an elo-based leaderboard for Mario Kart competition previously hosted on mkranking.com
+* [MK Ranking](/pages/mkranking) (2022), an elo-based leaderboard for Mario Kart competition.
 
 * [Speed Typer](/pages/speedtyper) (2022), a typing game in Flutter, made during a train ride from Lyon to Lille
 
