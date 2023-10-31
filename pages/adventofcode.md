@@ -20,7 +20,7 @@ For learning Go, the excellent [Go by Example](https://gobyexample.com/) was a g
 For many reasons, Go has my go-to language for server, replacing Node.js. The main reason being that I'm really confident that a project written in Go will work just as well years later, and coming back to it won't be a problem at all.
 
 ## 2022: Python
-Python is one of (if not the) most used language worldwide. Being fluent in Python might be like being fluent in english: a must have. The messy nature of Python in the version of the interpreter, int the language itself and in the libs (the standard lib is not anywhere as strong as the one in Go) made me a bit reluctant at first.
+Python is one of (if not the) most used language worldwide. Being fluent in Python might be like being fluent in english: a must have. The messy nature of Python in the version of the interpreter, in the language itself and in the libs (the standard lib is not anywhere as strong as the one in Go) made me a bit reluctant at first.
 
 Turns out Python is so popular for good reasons. It's compact and expressive, and comming from Go for AoC, Python feels like cheating. You want to do this or that complex operation ? No problem, there is a function that does exactly that. Or a list comprehension. Or a list comprehension within another list comprehension.
 

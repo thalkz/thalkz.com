@@ -40,7 +40,7 @@ This deployment process makes it easy to have both local and production versions
 
 ## A generalized ELO rating system
 
-Elo is a rating system that add or removes points to players after each match. It's particularity is that is takes the "strength" of each player into account: if a high-rated player beats a low-rated player, it does not grant him many points. However if the reverse happens (an upset), than the high-rated player losses many points. For this, the algorithm makes an estimation of the probability that each player will win, and compares it to the actual outcome. The bigger the difference, the more points are granted.
+Elo is a rating system that add or removes points to players after each match. It's particularity is that is takes the "strength" of each player into account: if a high-rated player beats a low-rated player, it does not grant him many points. However if the reverse happens (an upset), then the high-rated player losses many points. For this, the algorithm makes an estimation of the probability that each player will win, and compares it to the actual outcome. The bigger the difference, the more points are granted.
 
 This algorithm (or one of its variations) is used in chess, Starcraft, tennis and many other 2 player games. I needed to find a way to generalize the algorithm so that it would work for 2 to 4 players. Thankfully, [this article](https://towardsdatascience.com/developing-a-generalized-elo-rating-system-for-multiplayer-games-b9b495e87802) gives a very clear explanation on how elo works and how to generalize it to more players. My implementation can be found [here](https://github.com/thalkz/mkranking/blob/main/server/elo/elo.go). 
 

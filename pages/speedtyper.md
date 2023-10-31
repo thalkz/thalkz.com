@@ -24,7 +24,7 @@ Th game being so simple, the core features were really fast to implement. The ma
 
 ## Iterations from user tests
 
-1) In one of the first iteration, when typing mistake occured, the next word would instanstly be displayed. This turned out to be an issur for fast typers: a single mistake would often become a multi-word blunder. To fix this, I've added a one second pause, with the whole word turing red and shaking. It's a classic, but very effective.
+1) In one of the first iteration, when typing mistake occured, the next word would instanstly be displayed. This turned out to be an issue for fast typers: a single mistake would often become a multi-word blunder. To fix this, I've added a one second pause, with the whole word turing red and shaking. It's a classic, but very effective.
 
 2) The first iteration had a timer in seconds diplayed in the corner of the screen. But this turned out to be very distracting: when the time was almost up, players would bounce their eyes between the timer and the word to type, which turned into more typing mistakes and added unecessary stress. This was solved by replacing the timer with a bar, right in the center.
 
