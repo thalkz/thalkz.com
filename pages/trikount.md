@@ -2,10 +2,11 @@
 
 # Trikount
 * Date: 2022-23
+* Tech: Go, Sqlite, Docker
 * Source: [github](https://github.com/thalkz/mkranking)
 * Webapp [fr]: [trikount.com](https://trikount.com)
 
-A webapp to track expenses in groups, for travels, projects, etc.
+A webapp to track expenses in groups and easily split the bill
 
 ## Motivation
 Projects that are actually used (even by a few people) are much more motivating than anything else. As I was getting increasingly frustrated by the app I usualy used to share expense with my friends (ads, friction, bloated), I started working on a remake that I would actually enjoy to use.

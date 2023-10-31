@@ -6,7 +6,9 @@ I always have one or two side-projects in the making, and (thankfully) some actu
 
 ## Side-Projects
 
-* 2022-23 [⭐️ Trikount](/pages/trikount), a webapp to track expenses in groups, for travels, projects, etc.
+My favorite side-projects, with explanatory posts about the motivations for each project, the design process and key learnings. The code is (usually) open source and can be found on [my github](https://github.com/thalkz).
+
+* 2022-23 [⭐️ Trikount](/pages/trikount), a webapp to track expenses in groups and easily split the bill.
 
 * 2023 [Year of Knowledge](/pages/yearofknowledge), a year of learning one thing per day on different subjects, including learnings when traveling in Europe
 

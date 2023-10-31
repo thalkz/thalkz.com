@@ -2,7 +2,7 @@
 
 # MK Ranking
 * Date: 2022
-* Tech: Go, Docker, PostgreSQL
+* Tech: Go, PostgreSQL, Docker
 * Source: [github](https://github.com/thalkz/mkranking)
 * Demo [fr]: [mkranking.thalkz.com](https://mkranking.thalkz.com)
 
