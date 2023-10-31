@@ -45,5 +45,11 @@ Not having an account creates issues in itself: how to avoid loosing access to a
 ## Maximize compatibility
 For this project, I've chosen to maximize compatibility by making the webapp as static as possible, which means avoiding Javascript as much as possible. I have been pleasantly surprised to see the quality of the default HTML components, and how easily they can be combined to express interactions with the webapp. It has it's limits, of course, but the benefits are real the greater compatibility with any kind of browser and overall more future-proof.
 
+Plain and minimalistic HTML pages like this also load really fast, lowering the need for any further optimisation. It's fast by default, uses less data, and works better on bad internet connections.
+
 ## Conclusion
-Users are used to the high quality products they use every-day, most of them for free. On the development side, this is usually supported by intentional focus on quality, and the resources to back it up. Having a feature-rich product is better for the user, but only if the quality is there. Teams with lower amounts of resources should focus on the very few features that actually make sense, and not try to beat the competition on every aspect, because it's not going to happen.
+Of course, I'm not arguing that all products need to be plain HTML webapps without registration. For most apps, thoses limitations are way too hard and do not allow for the complexity require by a complete product. However, it's easy to over-estimate the feature scope that a given team can handle, and to under-estimate the amount of iterations necessary to make it actually work well.
+
+Users are used to the high quality products they use every-day, and this is why teams try to match this, by adding a ton of features to their products. But having a feature-rich product is better only if the quality is there to back it up. This requires true focus and resources to bring quality.
+
+Teams with lower amounts of resources should focus on the very few features that actually make sense, and not try to beat the competition on every aspect.
