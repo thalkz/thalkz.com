@@ -7,10 +7,6 @@
 
 Noxio is a two-player board game for mobile phones, inspired by Bacteria. 
 
-![screenshots](/images/noxio_screens.webp)
-
-Screenshots of Noxio on the AppStore
-
 ## Motivation
 
 When starting this project, I had a clear idea in mind: I wanted to do a remake of a game I had been obsessed about some years ago. A mini-game called Bacteria on a platform that no-longer exists today. It looked [like this](https://www.youtube.com/watch?v=QHdSQ2QTEDg&ab_channel=crabest2) (warning: 2007 vibes ahead). Bacteria was really easy to understand, but still had a great amount of depth to it, both in terms of tactics and strategy. It's not chess, but there is definitely a learning curve.

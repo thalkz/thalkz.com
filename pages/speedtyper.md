@@ -4,15 +4,9 @@
 * Date: 2022
 * Tech: Flutter
 * Source: [github](https://github.com/thalkz/speed_typer)
+* Demo: [gameplay video](/images/speedtyper.mp4)
 
 A typing game in Flutter, made during a train ride from Lyon to Lille.
-
-<video width="100%" controls>
-
-    <source src="/images/speedtyper.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-
-</video>
 
 ## Motivation
 
