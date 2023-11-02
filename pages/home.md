@@ -34,8 +34,6 @@ My latest side-projects, with explanatory posts about the motivations behind eac
 
 * [[WIP] Neopolis](/pages/neopolis) (2018-22), the Flutter app for Neopolis (co-authored with [jgrandchavin](https://github.com/jgrandchavin) and [deladourig](https://github.com/deladourig))
 
-## About
+## Contact
 
-The source-code of this website can be found on [github](https://github.com/thalkz), and is representative of my design and programming philosophy: keep things simple. For side-projects, I try to build things myself, which means avoid high-level frameworks or libraries as much as possible. 
-
-Some of my inspirations for this website are [Ryan Jacobs' blog](https://blog.notryan.com/), the [Designed to Last](https://jeffhuang.com/designed_to_last/) post, and the excellent [Advent of Code](https://adventofcode.com).
+My email address can be found of my [Github profile](https://github.com/thalkz). To comment or request a change on this website, you can create an issue or even make a PR on the [website's repository](https://github.com/thalkz/blog).
