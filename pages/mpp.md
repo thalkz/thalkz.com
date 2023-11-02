@@ -12,7 +12,7 @@ Ma Petite Planète (MPP) is a non-profit organisation that aims to get more peop
 
 When I met one of the co-founders 3 years ago, when the organisation was still in its early stage (it now has multiple hundred collaborators !). Everything was done though shared Google Sheets. It worked at a small scale, but the limitations made it really hard to get more participants on board. I helped build a first draft of a mobile app, that would then become their main product.
 
-## The Impact of initial tech choices
+## The impact of initial tech choices
 Technical choices made at the very beginning of a project have a huge impact on a product's life. Most choices are close to impossible to undo, especially if there is good traction on the product: the team is "pulled" to focus on improving the product. During development, the risks associated to a major technical switch is great: it's difficult to estimate how long it will take, does not bring any direct value to users, requires re-training for the devs, etc.
 
 I've witnessed this at MPP, where much of the app relies on Firestore. Firestore helped a lot for getting the app up and running: it virtually eliminates the need for a backend server, and therefore for a backend developer. All the business logic can be handeled client side, which worked well but has some hard limitations. Firestore is amazing tech, but it is not for everyone.
