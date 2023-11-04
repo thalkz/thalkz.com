@@ -24,9 +24,7 @@ My latest side-projects, with explanatory posts about the motivations behind eac
 
 ## At Revolt Games
 
-* [[WIP] Terra Pipeline](/pages/terra) (2022), a program that combines various sources of terrain data into a comprehensive database of world-wide hexagonal tiles
-
-* [[WIP] Terra API](/pages/terra) (2022), a public API to serve the Terra data, used in Neopolis & Neoland
+* [⭐️ Terra](/pages/terra) (2022), a program that processes and combines various sources of real-world data and an API to serve the data in hexagonal tiles
 
 * [[WIP] Neocli](/pages/neocli) (2021), a Javascript CLI to handle common game-related operations in Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
 
