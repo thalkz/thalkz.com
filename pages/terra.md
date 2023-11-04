@@ -32,7 +32,7 @@ Anyways, here are some of the things Terra provides :
 * what the major cities in each country are, as well as unique identifiers for each city (Neopolis requires a curated list of major cities)
 * what land is associated with each major city (each tile has a "closest city" field)
 * which "buildings" (called places in the Terra) exist in each tile, as well as categorization (based on [Foursquare's Place API](https://fours))
-* what kind of terrain is contained in each tile, in percent of landuse (forest, water, etc)
+* what kind of terrain is contained in each tile, in percent of land use (forest, water, etc)
 
 ## Sources of data
 
