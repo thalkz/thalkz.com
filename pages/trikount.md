@@ -9,7 +9,7 @@
 A webapp to track expenses in groups and easily split the bill.
 
 ## Motivation
-From previous projects (like [MK Ranking](/pages/mkranking)) I've seen how much better it when when working on a project that is actually used by people, even by a very few. Instead of guessing what to work on next, ideas come naturally from experience.
+From previous projects (like [MK Ranking](/pages/mk_ranking)) I've seen how much better it when when working on a project that is actually used by people, even by a very few. Instead of guessing what to work on next, ideas come naturally from experience.
 
 Thus, I started looking for an app or service I frequently use, but that didn't bring much satisfaction. At the time I was getting increasingly frustrated with an app we used to share group expenses with my friends. The concept is simple:
 

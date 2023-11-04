@@ -13,14 +13,17 @@ import (
 )
 
 var flags = html.CommonFlags | html.CompletePage
-var opts = html.RendererOptions{
-	Flags: flags,
-	Title: "Thalkz's portfolio",
-	CSS:   "/static/style.css",
-	Icon:  "/static/favicon.ico",
-	Head:  []byte("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"),
+
+func getRenderer(title string) markdown.Renderer {
+	var opts = html.RendererOptions{
+		Flags: flags,
+		Title: fmt.Sprintf("%v | Roland Lmd", title),
+		CSS:   "/static/style.css",
+		Icon:  "/static/favicon.ico",
+		Head:  []byte("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"),
+	}
+	return html.NewRenderer(opts)
 }
-var renderer = html.NewRenderer(opts)
 
 func loadMarkdown(filename string) (string, error) {
 	file, err := os.ReadFile(filename + ".md")
@@ -28,6 +31,8 @@ func loadMarkdown(filename string) (string, error) {
 		file, _ = os.ReadFile("pages/error.md")
 	}
 
+	title := toTitle(filename)
+	renderer := getRenderer(title)
 	result := string(markdown.ToHTML(file, nil, renderer))
 	return result, err
 }
@@ -51,6 +56,7 @@ func servePage(writer http.ResponseWriter, request *http.Request) {
 func serveVersion(writer http.ResponseWriter, request *http.Request) {
 	version := os.Getenv("VERSION")
 	text := fmt.Sprintf("version: %v", version)
+	renderer := getRenderer("Version")
 	page := string(markdown.ToHTML([]byte(text), nil, renderer))
 	io.WriteString(writer, page)
 }
