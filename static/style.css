@@ -33,14 +33,6 @@ strong {
   color: #FFF;
 }
 
-pre {
-  background: #f5f7f9;
-  color: #222;
-  padding: 1em;
-  border-left: 2px solid #69c;
-  overflow-x: auto;
-}
-
 code {
   padding: 2px 4px;
   vertical-align: text-bottom;
@@ -48,6 +40,20 @@ code {
   color: #69c;
   background-color: #222222;
   border-radius: 5px;
+}
+
+pre {
+  background: #000000;
+  border-radius: 8px;
+  color: #222;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0px 0px;
+  background-color: #000000;
+  border-radius: 0px;
 }
 
 img {
