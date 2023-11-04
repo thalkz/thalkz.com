@@ -2,7 +2,7 @@
 
 Hi, my name is Roland and I'm passionate about code, product design and entrepreneurship. I've worked since 2018 on building [Neopolis](https://neopolis.io), a mobile game that uses real-world data as game assets, as well as the compagny around it alongside two co-founders: Lucas and Ben. More info can be found on [Revolt Games's website](https://revoltgames.io).
 
-I always have one or two side-projects in the making, and (thankfully) some actually make it to working stage. I mainly write stuff in Flutter, Go and Typescript. I plan to share some of them on this website.
+I always have one or two side-projects in the making, and (thankfully) some actually make it to working stage. I mainly write stuff in Flutter, Go and Typescript. I plan to share some of them on this website, happy reading ! If you don't know where to start, the projects marked with a ⭐️ are my very favorite.
 
 ## Side-Projects
 
@@ -23,6 +23,8 @@ My latest side-projects, with explanatory posts about the motivations behind eac
 * [Ma Petite Planète](/pages/ma_petite_planete) (2020), the MVP of an app with ecological challenges, played in teams
 
 ## At Revolt Games
+
+My technical projects at Revolt Games, a gaming company that I co-founded in 2018.
 
 * [⭐️ Terra](/pages/terra) (2022), a program that processes and combines various sources of real-world data and an API to serve the data in hexagonal tiles
 
