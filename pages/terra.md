@@ -89,7 +89,7 @@ A caching layer with Redis takes full avantage of both the fact that some data a
 
 The whole project is documented on [a github page](https://revoltgames.github.io/docs/terra/intro) with the API's enpoints, example queries and responses, as well as detailed explanations. A [Open API page](https://terra.neopolis.app/docs/) is also generated at compile time.
 
-## Conclusion and learings
+## Conclusion and learnings
 
 Working on Terra has been particularly interesting on the data-processing side. Breaking the pipeline into multiple stages that are idempotent and produce intermediary steps made the development much faster. I've had to upgrade my SQL knowledge and overall I was impressed by how powerful PostgreSQL is : carefully crafted SQL queries goes a (very) long way. 
 
