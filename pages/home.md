@@ -36,4 +36,4 @@ My technical projects at Revolt Games, a gaming company that I co-founded in 201
 
 ## Contact
 
-My email address can be found on my [Github profile](https://github.com/thalkz). To comment or request a change on this website, you can create an issue or even make a PR on the [website's repository](https://github.com/thalkz/blog).
+My email address is `myfirstname.mylastname@gmail.com`, which can be found on my [Github profile](https://github.com/thalkz). To comment or request a change on this website, you can create an issue or even make a PR on the [website's repository](https://github.com/thalkz/blog).
