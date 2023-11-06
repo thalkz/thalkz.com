@@ -28,7 +28,7 @@ My technical projects at Revolt Games, a gaming company that I co-founded in 201
 
 * [⭐️ Terra](/pages/terra) (2022), a program that processes and combines various sources of real-world data and an API to serve the data in hexagonal tiles
 
-* [[WIP] Neocli](/pages/neocli) (2021), a Javascript CLI to handle common game-related operations in Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
+* [Neocli](/pages/neocli) (2021-22), a Javascript CLI to handle all kinds of game-related operations in Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
 
 * [[WIP] Neopolis Server](/pages/neopolis) (2019-22), the Node.js backend for Neopolis (co-authored with [nihiloproxima](https://github.com/nihiloproxima))
 
