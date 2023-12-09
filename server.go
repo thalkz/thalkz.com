@@ -20,7 +20,7 @@ func getRenderer(title string) markdown.Renderer {
 		Title: fmt.Sprintf("%v | Roland Lmd", title),
 		CSS:   "/static/style.css",
 		Icon:  "/static/favicon.ico",
-		Head: []byte(`<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+		Head: []byte(`<meta name="viewport" content="width=device-width, initial-scale=1">
 			<script defer data-domain="thalkz.com" src="https://analytics.thalkz.com/js/script.js"></script>`),
 	}
 	return html.NewRenderer(opts)
