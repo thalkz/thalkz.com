@@ -24,6 +24,10 @@ My latest side-projects, with explanatory posts about the motivations behind eac
 
 * [Ma Petite Planète](/pages/ma_petite_planete) (2020), the MVP of an app with ecological challenges, played in teams
 
+## Reading notes
+
+* [A Philosophy of Software Design](/pages/philosophy_of_software_design.md), a book about how to fight software complexity
+
 ## Contact
 
 My email address is `myfirstname.mylastname@gmail.com`, which can be found on my [Github profile](https://github.com/thalkz). To comment or request a change on this website, you can create an issue or even make a PR on the [website's repository](https://github.com/thalkz/blog).
