@@ -26,7 +26,7 @@ My latest side-projects, with explanatory posts about the motivations behind eac
 
 ## Reading notes
 
-* [A Philosophy of Software Design](/pages/philosophy_of_software_design.md), a book about how to fight software complexity
+* [A Philosophy of Software Design](/pages/philosophy_of_software_design), a book about how to fight software complexity
 
 ## Contact
 
