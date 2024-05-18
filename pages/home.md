@@ -1,4 +1,4 @@
-# Hey there
+# thalkz.com
 
 Hi, my name is Roland and I'm passionate about code, product design, and entrepreneurship. I've worked since 2018 on building [Neopolis](https://neopolis.io), a mobile game that uses real-world data as game assets, as well as the company around it alongside two co-founders: Lucas and Ben. More info can be found on [Revolt Games's website](https://revoltgames.io).
 
