@@ -2,20 +2,18 @@
 
 # Implementing the Meijster Distance algorithm in Kotlin
 
-At my current job, we wanted to implement some kind of "sticker" images for the UI. What we call a sticker is a regular image of some object or person, with the background removed. A sticker can be created from the camera roll or by using an existing image. But only removing the background doesn't really make it *feel* like a sticker. For it to actually look like a sticker, it needd to have a white border following the sticker's edge.
-
-So I ask Cyril on how to approach this problem, and he sent me a link to [this PDF](https://fab.cba.mit.edu/classes/S62.12/docs/Meijster_distance.pdf). A research paper titled "A GENERAL ALGORITHM FOR COMPUTING DISTANCE TRANSFORMS IN LINEAR TIME", from A. MEIJSTER‚ J.B.T.M. ROERDINK and W.H. HESSELINK.
+I was trying to find a way to render a white border for images of random shapes and came across [this PDF](https://fab.cba.mit.edu/classes/S62.12/docs/Meijster_distance.pdf). A research paper titled "A GENERAL ALGORITHM FOR COMPUTING DISTANCE TRANSFORMS IN LINEAR TIME", from A. MEIJSTER‚ J.B.T.M. ROERDINK and W.H. HESSELINK.
 
 Scrolling through this paper, I could see that 
-1) It's not super long, only 10 pages
-2) It has pseudo code that seems easy enough to implement, even though on first read it's pretty obscure
-3) It has some pretty intriguing graphs, like this one:
+* 1) It's not super long, only 10 pages
+* 2) It has pseudo code that seems easy enough to implement, even though on first read it's pretty obscure
+* 3) It has some pretty intriguing graphs, like this one:
 
 ![paper_graph](../images/meijster/pdf_graph.png)
 
-At this point, the concept of "lower envelope" or `Fu` are not immediately clear. But I took the time to read it and the overall algorithm isn't too complex !
+At this point, the concepts of "lower envelope" or `Fu` are not immediately clear. But after taking the time to read the paper, it's actually pretty neat !
 
-## How does this help to draw white borders on stickers ?
+## How does this help in drawiung borders ?
 
 The Meijster distance is used to create what's called a [distance transform](https://en.wikipedia.org/wiki/Distance_transform) or distance field. In my case, it will be the distance of each pixel to the closest non-transparent pixel of my source image. All pixels that are non-transparent are part of the sticker image and should have a distance of 0. All other pixels, should have a distance stricktly greater than 0.
 
@@ -313,7 +311,7 @@ And well that's it. We run this code for each u, going incrementally and when `u
 
 ## Conclusion
 
-We implemented the Meijster distance algorithm, which gets us the distance of each pixel to the closest non-transparent pixel. We then use this distance to draw some pixels in white to achieve the "sticker" effect. For a 500x500 image on a Pixel 8, this code runs in about 8ms. It's a way too slow to draw every frame (it will almost block one cpu core), but can be used for one-off calculations.
+We implemented the Meijster distance algorithm, which gets us the distance of each pixel to the closest non-transparent pixel. We then use this distance to draw a white border on image. For a 500x500 image on a Pixel 8, this code runs in about 8ms. It's a way too slow to draw every frame (it will almost block one cpu core), but can be used for one-off calculations.
 
 The next logical step is to introduce some parallelisation in here. Optimally, this should be done on the GPU. I might try to parallelise it a bit on CPU first, to see what kind of performance we can achieve there.
 
