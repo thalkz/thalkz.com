@@ -4,6 +4,11 @@ Hi, my name is Roland and I'm passionate about code, product design, and entrepr
 
 I always have one or two side projects in the making, and (thankfully) some make it to working stage. I mainly write stuff in Flutter, Go, and Typescript. I plan to share some of them on this website, happy reading! If you don't know where to start, the projects marked with a ⭐️ are my very favorite.
 
+## Posts
+
+* [Implementing the Meijster Distance algorithm in Kotlin](/pages/meijster_distance), step by step explanation of how the Meijster distance transform is calculated
+* [A Philosophy of Software Design](/pages/philosophy_of_software_design), a book about how to fight software complexity
+
 ## Side-Projects
 
 My latest side-projects, with explanatory posts about the motivations behind each project, the design process, and key learnings.
@@ -23,10 +28,6 @@ My latest side-projects, with explanatory posts about the motivations behind eac
 * [Noxio](/pages/noxio) (2020), a two-player board game for mobile phones, a remake of Bacteria
 
 * [Ma Petite Planète](/pages/ma_petite_planete) (2020), the MVP of an app with ecological challenges, played in teams
-
-## Reading notes
-
-* [A Philosophy of Software Design](/pages/philosophy_of_software_design), a book about how to fight software complexity
 
 ## Contact
 

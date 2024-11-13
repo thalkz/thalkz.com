@@ -1,6 +1,6 @@
 [Home](/)
 
-# Implementing the Meijster Distance algorithm on Android
+# Implementing the Meijster Distance algorithm in Kotlin
 
 At my current job, we wanted to implement some kind of "sticker" images for the UI. What we call a sticker is a regular image of some object or person, with the background removed. A sticker can be created from the camera roll or by using an existing image. But only removing the background doesn't really make it *feel* like a sticker. For it to acutally look like a sticker, it needd to have a white border following the sticker's edge.
 
@@ -33,18 +33,21 @@ Since I'm doing this on the CPU, this implementation is O(n), with n the number 
 
 As mentioned above, the algorithm's input in our case is a Bitmap (that can be seen as 2d array, with each value representing a pixel's color). Let's say we have the image that looks a bit like a of a croissant 🥐, like in Figure A.
 
-![figure A](../images/meijster/figure_a.png)
+<img src="../images/meijster/figure_a.png" alt="figure" width="500px">
+
 *Figure A: Bitmap of a croissant, where all pixels inside the image are marked with a red O, and all transparent pixels are left blank*
 
 The Meijster distance transform is computed in 4 steps: the first two steps iterate over columns and the last two iterate over rows. 
 - In step 1 & 2, we take a given column, and iterate through each pixel. First from top to bottom and then from bottom to top. The goal here is to calculate the "vertical distance" of each pixel to the closest non-transparent pixel.
 
-![figure B](../images/meijster/figure_b.png)
+<img src="../images/meijster/figure_b.png" alt="figure" width="500px">
+
 *Figure B: Step 1 and 2, for the column at x=3. All other column can also be processed independently*
 
 - The step 3 & 4, we use the output of the previous steps. Here, we iterate over rows, forst from left to right, and then from right to left. Now these steps are a bit harder to explain, but in a nutshell, the goal of step 3 is to compute the "lowest envelope" for the row, and then step 4 uses that to compute the actual distance to the closest non-transparent point.
 
-![figure B](../images/meijster/figure_c.png)
+<img src="../images/meijster/figure_c.png" alt="figure" width="500px">
+
 *Figure C: Step 3 and 4, for the row at y=3. All other row can also be processed independently*
 
 The output will also be something that looks like a Bitmap, but each value represents a distance instead of a color. So to avoid confusion, I'll create a `IntBuffer2d` type to hold the output.
@@ -64,7 +67,8 @@ We'll set the `IntBuffer2d`'s `width` and `height` to the same values as the sou
 
 Here is what we expect our algorithm to return for our current example:
 
-![figure B](../images/meijster/figure_d.png)
+<img src="../images/meijster/figure_d.png" alt="figure" width="500px">
+
 *Figure D: example output for our example. Here I'm using what's called the chessboard distance, be in our algorithm we'll use the more classical Euclidian distance, which is the distance formula we usually think of when talking about distances*
 
 Now that we have the overall approach, let's go in the details for each step
@@ -108,13 +112,15 @@ for (y in 1..(height - 1)) {
 
 The `isTransparent(x,y)` function returns true if the pixel of the source image is transparent.
 
-![figure E](../images/meijster/figure_e.png)
+<img src="../images/meijster/figure_e.png" alt="figure" width="500px">
+
 *Figure E: Vertical distance to the closest non-transparent pixel above*
 
 Now let's use these values to compute the actual vertical distance. This can be achieved by iterating from bottom to top, and for each pixel in the column:
 - if the vertical distance is higher then the pixel below, then set it to 1 + vertical distance of pixel below
 
-![figure F](../images/meijster/figure_f.png)
+<img src="../images/meijster/figure_f.png" alt="figure" width="500px">
+
 *Figure F: Vertical distance to the closest non-transparent pixel above or below*
 
 So far, so good ! We already have something that looks like a distance transform. It's just not very precise. You can see that pixels left and right of the image are considered extremely far (infinite). This is because we only looked at each column independently. Next, we'll take a look at rows. However, the approach will not be so simple: for a given pixel, to make sure that we actually have the closest distance, we need to consider all other columns in the given row.
@@ -123,7 +129,8 @@ So far, so good ! We already have something that looks like a distance transform
 
 As mentioned before, step 3 and 4 run on each row independently. So let's take a specific row (y=5, that I modified a bit to make more interesting) and look at what we should do.
 
-![figure G](../images/meijster/figure_g.png)
+<img src="../images/meijster/figure_g.png" alt="figure" width="500px">
+
 *Figure G: row y=5 of our buffer, slightly modified for it to be more interesting*
 
 Now each value of the row represents the distance to the closest non-transparent pixel on the vertical axis. We can use it to compute the actual distance.
@@ -132,7 +139,8 @@ Now each value of the row represents the distance to the closest non-transparent
 
 Let's define some terms for our euclidian distance. To compute the distance between point A(xa, ya) and point B(xb, yb), we can introduce a 3rd point P(i, j) where `i = xb` and `j = ya`. It's easier to see with an image
 
-![figure H](../images/meijster/figure_h.png)
+<img src="../images/meijster/figure_h.png" alt="Figure" width="500px">
+
 *Figure H: reminder of some ground school geometry*
 
 Pivot point P helps us to write the distance calculation: the distance AB is the square root of (AP)^2 + (BP)^2. For simplicity, let's drop the square root, as is doesn't really matter in our case. Now let's apply this to our problem.
@@ -153,31 +161,36 @@ Now that we have a concept of pivot point P(i, y), it's useful to see what happe
 
 In the next figure, we are still on the row y=5, and have chosen arbitrarily a pivot point at i=4: P(4,5). Now let's compute `f(x, i) = f(x, 4)` for all x. For this to be easier to see, let's plot it in a graph:
 
-![figure I](../images/meijster/figure_i.png)
+<img src="../images/meijster/figure_i.png" alt="figure" width="500px">
+
 *Figure I: graph of f(x, i) for the pivot point at i=4*
 
 The curve is a parabola, which is to be expected given the quadratic formula of `f`. For simplicity, let's draw this curve as a line. We can call it "distance-curve" for the pivot point at i=5.
 
-![figure J](../images/meijster/figure_j.png)
+<img src="../images/meijster/figure_j.png" alt="figure" width="500px">
+
 *Figure J: distance-curve for the pivot point at i=4*
 
 ### The lower envelope
 
 Now the next step is to consider all distance curves for all possible pivot points. That put that in a graph.
 
-![figure K](../images/meijster/figure_k.png)
+<img src="../images/meijster/figure_k.png" alt="figure" width="500px">
+
 *Figure K: all distance-curves for the row*
 
 That's a mess. But it does highlight something interesting, we can highlight the lower part of the combined curves, to form a new curve: the lower envelope.
 
-![figure L](../images/meijster/figure_l.png)
+<img src="../images/meijster/figure_l.png" alt="figure" width="500px">
+
 *Figure L: all distance-curves for the row, with the lower envelope highlighted*
 
 What's special about this lower envelope is that is represents the distance for each x to closest non-transparent pixel, going though all possible pivot points. That exactly what we're looking for, isn't it ?
 
 For a given `x` (let's say x=4), we can look at the lower envelope and find which is the current "best" distance-curve. With this, we know which pivot point to use to have the minimum distance.
 
-![figure M](../images/meijster/figure_m.png)
+<img src="../images/meijster/figure_m.png" alt="figure" width="500px">
+
 *Figure M: for x=4, the distance-curve that is part of the lower envelope is for pivot point i=5*
 
 ### Putting this in code
@@ -253,7 +266,8 @@ Now the plan here is create the lower-envelope iteratively. We'll start with en 
 
 For example, the lower envelope after adding the u=3 should look like this:
 
-![figure N](../images/meijster/figure_n.png)
+<img src="../images/meijster/figure_n.png" alt="figure" width="500px">
+
 *Figure N: lower envelope after adding u=3, it's not completed yet*
 
 When adding a new distance-curve there are 3 posible cases (it's what's represented in the 1st figure of this post, so let's uise it again 😉)
@@ -261,7 +275,7 @@ When adding a new distance-curve there are 3 posible cases (it's what's represen
  - case 2) the u-th distance-curve is worse than the whole previous lowest-envelope; we ignore it
  - case 3) the u-th distance-curve intersects the previous lowest-envelope; we update it
 
- ![paper_graph](../images/meijster/pdf_graph.png)
+![paper_graph](../images/meijster/pdf_graph.png)
 
  Here is what it looks like in code:
 
