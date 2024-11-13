@@ -2,18 +2,18 @@
 
 # Implementing the Meijster Distance algorithm in Kotlin
 
-At my current job, we wanted to implement some kind of "sticker" images for the UI. What we call a sticker is a regular image of some object or person, with the background removed. A sticker can be created from the camera roll or by using an existing image. But only removing the background doesn't really make it *feel* like a sticker. For it to acutally look like a sticker, it needd to have a white border following the sticker's edge.
+At my current job, we wanted to implement some kind of "sticker" images for the UI. What we call a sticker is a regular image of some object or person, with the background removed. A sticker can be created from the camera roll or by using an existing image. But only removing the background doesn't really make it *feel* like a sticker. For it to actually look like a sticker, it needd to have a white border following the sticker's edge.
 
 So I ask Cyril on how to approach this problem, and he sent me a link to [this PDF](https://fab.cba.mit.edu/classes/S62.12/docs/Meijster_distance.pdf). A research paper titled "A GENERAL ALGORITHM FOR COMPUTING DISTANCE TRANSFORMS IN LINEAR TIME", from A. MEIJSTER‚ J.B.T.M. ROERDINK and W.H. HESSELINK.
 
 Scrolling through this paper, I could see that 
 1) It's not super long, only 10 pages
 2) It has pseudo code that seems easy enough to implement, even though on first read it's pretty obscure
-3) It has some pretty intriging graphs, like this one:
+3) It has some pretty intriguing graphs, like this one:
 
 ![paper_graph](../images/meijster/pdf_graph.png)
 
-Now what `Fu` is or what "lower envelope" exactly means isn't exatly clear right now. But I took the time to read it and the overall algorithm isn't too complex !
+At this point, the concept of "lower envelope" or `Fu` are not immediately clear. But I took the time to read it and the overall algorithm isn't too complex !
 
 ## How does this help to draw white borders on stickers ?
 
@@ -31,7 +31,7 @@ Since I'm doing this on the CPU, this implementation is O(n), with n the number 
 
 ## Overall approach
 
-As mentioned above, the algorithm's input in our case is a Bitmap (that can be seen as 2d array, with each value representing a pixel's color). Let's say we have the image that looks a bit like a of a croissant 🥐, like in Figure A.
+As mentioned above, the algorithm's input in our case is a Bitmap (that can be seen as 2d array, with each value representing a pixel's color). Let's say we have the image that looks a bit like a of a croissant 🥐, like in the next figure.
 
 <img src="../images/meijster/figure_a.png" alt="figure" width="500px">
 
@@ -44,7 +44,7 @@ The Meijster distance transform is computed in 4 steps: the first two steps iter
 
 *Figure B: Step 1 and 2, for the column at x=3. All other column can also be processed independently*
 
-- The step 3 & 4, we use the output of the previous steps. Here, we iterate over rows, forst from left to right, and then from right to left. Now these steps are a bit harder to explain, but in a nutshell, the goal of step 3 is to compute the "lowest envelope" for the row, and then step 4 uses that to compute the actual distance to the closest non-transparent point.
+- The step 3 & 4 build upon the output of the previous steps. This time, they iterate over rows: first from left to right and then from right to left. The goal of step 3 is to compute the "lowest envelope" for the row, and step 4 uses it to compute all distances.
 
 <img src="../images/meijster/figure_c.png" alt="figure" width="500px">
 
@@ -88,7 +88,7 @@ for (x in 0..(width - 1)) {
 }
 ```
 
-Inside this loop, we will iterate over y for each rown, first from top to bottom.
+Inside this loop, we will iterate over y for each row, first from top to bottom.
 And for each pixel in the column:
 - if the current pixel is non-transparent, set the vertical distance to 0
 - otherwise, set it to 1 + the vertical distance of the pixel above
@@ -110,7 +110,7 @@ for (y in 1..(height - 1)) {
 }
 ```
 
-The `isTransparent(x,y)` function returns true if the pixel of the source image is transparent.
+The `isTransparent(x, y)` function returns true if the pixel of the source image is transparent.
 
 <img src="../images/meijster/figure_e.png" alt="figure" width="500px">
 
@@ -127,7 +127,7 @@ So far, so good ! We already have something that looks like a distance transform
 
 ## Step 3 & 4 - creating and using the lowest envelope
 
-As mentioned before, step 3 and 4 run on each row independently. So let's take a specific row (y=5, that I modified a bit to make more interesting) and look at what we should do.
+As mentioned before, step 3 and 4 run on each row independently. So let's take a specific row and look at what we should do.
 
 <img src="../images/meijster/figure_g.png" alt="figure" width="500px">
 
