@@ -9,9 +9,9 @@ I always have one or two side projects in the making, and (thankfully) some make
 * [Implementing the Meijster Distance algorithm in Kotlin](/pages/meijster_distance), step by step explanation of how the Meijster distance transform is calculated
 * [A Philosophy of Software Design](/pages/philosophy_of_software_design), a book about how to fight software complexity
 
-## Side-Projects
+## Projects
 
-My latest side-projects, with explanatory posts about the motivations behind each project, the design process, and key learnings.
+My latest projects, with explanatory posts about the motivations behind each project, the design process, and key learnings.
 
 * [Year of Knowledge](/pages/year_of_knowledge) (2023), a year of learning one thing per day on different subjects, including learnings when traveling in Europe.
 
