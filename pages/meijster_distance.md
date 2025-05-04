@@ -1,35 +1,30 @@
 [Home](/)
 
-# Implementing the Meijster Distance algorithm in Kotlin
+Let's say we have a transparent image (of a croissant, for example) and want to apply a white outline to make it look better.
 
-I was trying to find a way to render a white border for images of random shapes and came across [this PDF](https://fab.cba.mit.edu/classes/S62.12/docs/Meijster_distance.pdf). A research paper titled "A GENERAL ALGORITHM FOR COMPUTING DISTANCE TRANSFORMS IN LINEAR TIME", from A. MEIJSTER‚ J.B.T.M. ROERDINK and W.H. HESSELINK.
+<img src="../images/meijster/croissants.png" alt="figure" width="500px">
 
-Scrolling through this paper, I could see that 
-* 1) It's not super long, only 10 pages
-* 2) It has pseudo code that seems easy enough to implement, even though on first read it's pretty obscure
-* 3) It has some pretty intriguing graphs, like this one:
+There are many ways to go about this, of course. However, one of the most efficient can be found in [this paper](https://fab.cba.mit.edu/classes/S62.12/docs/Meijster_distance.pdf). "A general algorithm for computing trandsformations in linear time", it sounds promising!
 
-![paper_graph](../images/meijster/pdf_graph.png)
+Scrolling through this paper, we can see that it's not that long (only 10 pages), it has pseudo code that seems easy enough to implement and it contains loads of graphs... So let's implement it! 
 
-At this point, the concepts of "lower envelope" or `Fu` are not immediately clear. But after taking the time to read the paper, it's actually pretty neat !
+## What does that paper have to do with our oultined-croissant ?
 
-## How does this help in drawiung borders ?
+The paper describes how to compute efficiently something called the Meijster distance. The Meijster distance is used to create what's called a [distance transform](https://en.wikipedia.org/wiki/Distance_transform) or distance field. In our case, it will be the distance of each pixel to the closest non-transparent pixel of my source image. All pixels that are non-transparent are part of the sticker image and should have a distance of 0. All other pixels, should have a distance strictly greater than 0.
 
-The Meijster distance is used to create what's called a [distance transform](https://en.wikipedia.org/wiki/Distance_transform) or distance field. In my case, it will be the distance of each pixel to the closest non-transparent pixel of my source image. All pixels that are non-transparent are part of the sticker image and should have a distance of 0. All other pixels, should have a distance stricktly greater than 0.
+With this distance transform computed, all we need to do is to draw a white pixel if the distance is less than a given threshold, or leave the pixel transparent otherwise. That should give us the effect we're looking for.
 
-With this distance transform, all that remains to be done is to draw a white pixel if the distance is less than a give threshold, or leave the pixel transparent otherwise. That should give us the effect we're looking for.
-
-Since we're using terms like "for each pixel", it really sounds like we should be doing compute this on the GPU, in a shader. But for now, the goal is just to understand the algorithm, so I decided to write it in my Kotlin first.
+Since we're using terms like "for each pixel", it really sounds like it should be computed on the GPU. But for now, the goal is just to understand the algorithm, so let's make a pure kotlin implementation first.
 
 ## Performance considerations
 
-What's interesting about the Meijster distance algorithm, is that it can be pretty well parallelised. Each pixel is not exactly independent, but it's possible to do two passes: One for each column and for for each row. So if running perfectly in parallel, the overall time complexity will be O(number of row + number of columns).
+What's interesting about the Meijster distance algorithm, is that it can be pretty well parallelized. Each pixel is not exactly independent, but it's possible to do two passes: One for each column and for for each row. So if running perfectly in parallel, the overall time complexity will be O(number of row + number of columns).
 
-Since I'm doing this on the CPU, this implementation is O(n), with n the number of pixels.
+Since I'm doing this on the CPU, this implementation is O(n), with n being the number of pixels.
 
 ## Overall approach
 
-As mentioned above, the algorithm's input in our case is a Bitmap (that can be seen as 2d array, with each value representing a pixel's color). Let's say we have the image that looks a bit like a of a croissant 🥐, like in the next figure.
+The algorithm's input in our case is a Bitmap (that can be seen as 2d array, with each value representing a pixel's color). Let's say we have the image that looks a bit like a of a croissant 🥐, like in the next figure.
 
 <img src="../images/meijster/figure_a.png" alt="figure" width="500px">
 
