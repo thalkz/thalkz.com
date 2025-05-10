@@ -6,6 +6,7 @@ I always have one or two side projects in the making, and (thankfully) some make
 
 ## Posts
 
+* [2025-05-10 Composable Markers for Google Maps](/pages/maps_compose_markers), a way to render create more dynamic & interactive maps with Compose
 * [2024-11-13 Meijster Distance in Kotlin](/pages/meijster_distance), a step by step explanation of the algorithm
 * [2024-05-18 A Philosophy of Software Design](/pages/philosophy_of_software_design), notes of book about how to fight software complexity
 
