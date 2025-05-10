@@ -1,5 +1,9 @@
 # Personal portfolio website
 
+## Running locally
+
+Run `go run .`
+
 ## Server deployment
 To deploy a new version of the server (go code, favicon or static assets), create a semver tag and push to github.
 
