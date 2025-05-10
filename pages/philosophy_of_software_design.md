@@ -1,6 +1,6 @@
 [Home](/)
 
-# Notes from A Philosophy of Software Design
+# Notes on Philosophy of Software Design
 * Read in 2024
 
 My key takeaways from reading "A Philosophy of Software Design" by John Ousterhout. Those are mostly quotes from the book. 

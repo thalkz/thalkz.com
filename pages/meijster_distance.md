@@ -1,5 +1,7 @@
 [Home](/)
 
+# Meijster Distance in Kotlin
+
 Let's say we have a transparent image (of a croissant, for example) and want to apply a white outline to make it look better.
 
 <img src="../images/meijster/croissants.png" alt="figure" width="500px">
