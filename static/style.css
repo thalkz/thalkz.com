@@ -1,13 +1,14 @@
 @import url("normalize.css");
 @import url("chroma-monokai.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap');
+
 body {
   background-color: #111;
   font-family: "Source Sans 3", sans-serif;
   font-size: large;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
 }
 
