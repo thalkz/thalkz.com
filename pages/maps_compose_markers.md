@@ -12,7 +12,7 @@ Thankfully, there are some workarounds to solve this issue, so let's explore the
 
 > DISCLAIMER: Many things in this post are simplified to make the point clearer and easier to follow, and some of the code doesn't run as-is.
 
-### The easy option - using Google Maps' Projection
+## The easy option - using Google Maps' Projection
 
 The fastest way to render a Composable on Google Maps is to use the provided `Projection` class from the SDK. This class is provided by `CameraPositionState` and has a `toScreenLocation()` method. In the context of maps, the concept of projection is pretty straightforward: it's the transformation of a value in 3D space (a LatLng) into a 2D space (a pixel on screen). I'm oversimplifying a bit, but that's the general idea.
 
@@ -75,7 +75,7 @@ However, when adding hundreds or thousands of markers, it starts to look bad: th
 
 There is a more advanced solution that requires more code, but can be very effective. How? By performing the projection directly on the Main thread, avoiding the communication costs.
 
-### The advanced option - implementing the projection Kotlin-side
+## The advanced option - implementing the projection Kotlin-side
 
 Just like most online maps, Google Maps is using a variation of the Mercator projection for its map called "web mercator" or "pseudo mercator". It is a simplified (and therefore less accurate) version of Mercator, optimized for online map rendering. It was popularized by Google Maps itself and has become the standard.
 
@@ -220,7 +220,7 @@ fun MapScreen(modifier: Modifier = Modifier) {
 }
 ```
 
-### Conclusion
+## Conclusion
 
 This approach solves one of the issues with modern map SDKs. It does have many drawbacks, though.
 
