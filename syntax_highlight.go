@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 	"io"
-	"log"
-	"github.com/gomarkdown/markdown/ast"
+
 	"github.com/alecthomas/chroma"
 	"github.com/alecthomas/chroma/formatters/html"
 	"github.com/alecthomas/chroma/lexers"
 	"github.com/alecthomas/chroma/styles"
+	"github.com/gomarkdown/markdown/ast"
 )
 
 var (
