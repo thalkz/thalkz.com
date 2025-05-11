@@ -22,6 +22,7 @@ func getRenderer(title string) markdown.Renderer {
 		Icon:  "/static/favicon.ico",
 		Head: []byte(`<meta name="viewport" content="width=device-width, initial-scale=1">
 			<script defer data-domain="thalkz.com" src="https://analytics.thalkz.com/js/script.js"></script>`),
+		RenderNodeHook: codeBlockRenderHook,
 	}
 	return html.NewRenderer(opts)
 }
