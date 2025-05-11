@@ -1,8 +1,13 @@
 @import url("normalize.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
 body {
   background-color: #111;
-  font-family: "Verdana", courier, monospace;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: large;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -11,6 +16,11 @@ body {
   line-height: 1.5;
   padding: 4em 1em;
   color: #EEEEEE;
+}
+
+blockquote {
+  color: #d4d4d4;
+  font-style: italic;
 }
 
 a {
@@ -23,7 +33,7 @@ a:hover {
 }
 
 h2 {
-  margin-top: 1em;
+  margin-top: 2em;
   padding-top: 1em;
 }
 
@@ -31,13 +41,14 @@ h1,
 h2,
 strong {
   color: #FFF;
+  font-weight: bold;
 }
 
 code {
   padding: 2px 4px;
   vertical-align: text-bottom;
   font-family: monospace;
-  color: #69c;
+  color: rgb(255, 224, 121);
   background-color: #222222;
   border-radius: 5px;
 }
