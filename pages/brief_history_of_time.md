@@ -24,13 +24,14 @@ Among these forces, gravity is special. Some theories manage to convincingly uni
 The formation of black holes is one of those situations. As long as a star has "fuel to burn," it can resist gravity that attempts to pull the star inward. When the star runs out of things to burn, it collapses. In certain cases, the gravity becomes so strong that it surpasses even the forces that separate atoms from each other and creates a point of infinite density: a singularity.
 
 Hawking spent years studying the properties of black holes, culminating in the discovery that black holes, from which nothing—not even light—is supposed to escape, are emitting radiation. This radiation is now called Hawking radiation and has to do with the second principle of thermodynamics.
+
 ## 2) The uncertainty principle contradicts determinism and is central to modern physics
 
 Today's two main theories are Einstein's Relativity and quantum physics. Both theories can only partially describe reality. Relativity describes large-scale events to a very high degree of precision, like the movement of stars or the GPS system. On the other hand, quantum physics describes particles and their interactions. To this day, these two theories are incompatible. Attempting to unify them leads to absurd results that are yet to be overcome.
 
 Hawking's work falls right in the middle: in black holes and during the formation of our universe, both gravitational forces and quantum effects are playing a major role. One of the core concepts of quantum physics is that it is not possible to know both the precise position and speed of a particle at the same time. This is called the uncertainty principle and is a fundamental limitation of what can be known. In fact, this principle is so important that it changed the meaning of scientific research, which is now described as "discovering truths within the bounds of the uncertainty principle."
 
-The principle invalidates determinism as it was originally formulated by Laplace. Knowing the initial conditions of a system as well as the rules that the system follows is not enough to predict its behavior. In fact, this is one of the major difficulties when trying to understand the origins of the universe.
+The principle invalidates determinism as it was originally formulated by Laplace. Knowing the initial conditions of a system as well as the rules that the system follows is not enough to predict its behavior. The behaviour is not random either, but rather follows a probabilistic model.
 
 ## 3) The anthropic principle as a justification for the formation of life
 

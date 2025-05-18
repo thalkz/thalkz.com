@@ -2,6 +2,7 @@
 
 ## Posts
 
+* [2025-05-10 Takeways from a Brief History of Time](/pages/maps_compose_markers), some notes from reading Stephen Hawking's book about black holes and the Big Bang
 * [2025-05-10 Composable Markers for Google Maps](/pages/maps_compose_markers), a way to render and create more dynamic & interactive maps with Compose
 * [2024-11-13 Meijster Distance in Kotlin](/pages/meijster_distance), a step-by-step explanation of the algorithm
 * [2024-05-18 Notes on Philosophy of Software Design](/pages/philosophy_of_software_design), notes from a book about how to fight software complexity
