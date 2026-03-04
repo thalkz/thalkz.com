@@ -9,7 +9,7 @@ While sharing this take, I've had mixed feedback. Some say it is a bit too provo
 
 ## State of the Art ?
 
-We discussed this recently with [Cyril](cyrilmottier.com) at amo. He was questioning the validity of the technical manifesto we were starting to write. This manifesto was supposed to assemble all the coding principles that were applied by amo's Android team, some applied more largely at the company scale. I do believe that this manifesto has solid ideas on what can make a small-to-medium tech team succeed. In my view, it is the state of the art of software engineering.
+We discussed this recently with [Cyril](https://cyrilmottier.com) at amo. He was questioning the validity of the technical manifesto we were starting to write. This manifesto was supposed to assemble all the coding principles that were applied by amo's Android team, some applied more largely at the company scale. I do believe that this manifesto has solid ideas on what can make a small-to-medium tech team succeed. In my view, it is the state of the art of software engineering.
 
 _The state of the art of the old world._
 
