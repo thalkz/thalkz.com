@@ -2,6 +2,7 @@
 
 ## Posts
 
+* [2026-03-4 Just not required anymore](/pages/just_not_required_anymore), a take on AI's imlpact to software engineering
 * [2025-05-10 Takeways from a Brief History of Time](/pages/brief_history_of_time), some notes from reading Stephen Hawking's book about black holes and the Big Bang
 * [2025-05-10 Composable Markers for Google Maps](/pages/maps_compose_markers), a way to render and create more dynamic & interactive maps with Compose
 * [2024-11-13 Meijster Distance in Kotlin](/pages/meijster_distance), a step-by-step explanation of the algorithm
